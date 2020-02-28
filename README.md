@@ -1,6 +1,6 @@
-# <img width="224" alt="logo" src="https://user-images.githubusercontent.com/6583994/75543098-255df280-5a32-11ea-8a3d-419d581a135c.png">
+# <img width="224" alt="logo" src="https://github.com/yumauri/eweector/blob/master/assets/logo.png?raw=true">
 
-E-wee-ctor is a educational purpose project to make a tiny [Effector](https://github.com/zerobias/effector) ☄️-like library.
+E-wee-ctor is a educational purpose project to make a tiny [Effector](https://github.com/zerobias/effector) ☄️-like library
 
 ## Highlights
 
