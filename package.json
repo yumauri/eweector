@@ -1,13 +1,14 @@
 {
   "name": "eweector",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "e-wee-ctor is a educational purpose project to make a tiny Effector-like library",
   "author": "Victor Didenko <yumaa.verdin@gmail.com> (https://yumaa.name)",
   "type": "module",
   "private": true,
   "scripts": {
     "format": "prettier --write \"src/**/*.js\"",
-    "lint": "xo"
+    "lint": "xo",
+    "run1": "node test/01_counter.js 2>/dev/null"
   },
   "prettier": {
     "printWidth": 80,
