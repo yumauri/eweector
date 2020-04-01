@@ -10,3 +10,7 @@ E-wee-ctor is a educational purpose project to make a tiny [Effector](https://gi
 - Second meaning of "wee" is also fit
 - Also my name is Victor and I like how eweector sounds :)
 - I plan to write article/s about this project, stay tuned
+
+## Chapters
+
+1. [E~wee~ctor: writing tiny Effector from scratch #1](https://dev.to/yumauri/e-wee-ctor-writing-tiny-effector-from-scratch-1-1kap) – Counter
