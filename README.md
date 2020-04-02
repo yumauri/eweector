@@ -14,3 +14,4 @@ E-wee-ctor is a educational purpose project to make a tiny [Effector](https://gi
 ## Chapters
 
 1. [E~wee~ctor: writing tiny Effector from scratch #1](https://dev.to/yumauri/e-wee-ctor-writing-tiny-effector-from-scratch-1-1kap) – Counter
+2. [E~wee~ctor: writing tiny Effector from scratch #2](https://dev.to/yumauri/e-wee-ctor-writing-tiny-effector-from-scratch-2-31po) – Maps and Filters
