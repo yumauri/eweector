@@ -8,7 +8,7 @@
   "scripts": {
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "xo",
-    "run1": "node test/01_counter.js 2>/dev/null"
+    "test": "ava --verbose"
   },
   "prettier": {
     "printWidth": 80,
@@ -35,8 +35,10 @@
     }
   },
   "devDependencies": {
+    "ava": "^3.5.2",
+    "ninos": "^3.0.0",
     "prettier": "^1.19.1",
-    "xo": "^0.28.0"
+    "xo": "^0.28.2"
   },
   "engines": {
     "node": ">=13"
