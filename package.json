@@ -31,7 +31,9 @@
       "unicorn/import-index": "off",
       "unicorn/filename-case": "off",
       "capitalized-comments": "off",
-      "no-return-assign": "off"
+      "no-return-assign": "off",
+      "default-case": "off",
+      "no-labels": "off"
     }
   },
   "devDependencies": {

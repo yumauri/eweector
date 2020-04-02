@@ -1,4 +1,5 @@
 import { createNode } from './createNode.js'
+import { compute } from './step.js'
 import { watch } from './watch.js'
 
 export const createStore = defaultState => {
@@ -6,7 +7,7 @@ export const createStore = defaultState => {
   const store = {}
 
   store.graphite = createNode({
-    seq: [value => (currentState = value)],
+    seq: [compute(value => (currentState = value))],
   })
 
   store.watch = fn => {
@@ -17,13 +18,23 @@ export const createStore = defaultState => {
   store.on = (event, fn) => {
     const node = createNode({
       next: [store.graphite],
-      seq: [value => fn(currentState, value)],
+      seq: [compute(value => fn(currentState, value))],
     })
     event.graphite.next.push(node)
     return store
   }
 
   store.reset = event => store.on(event, () => defaultState)
+
+  store.map = fn => {
+    const mapped = createStore(fn(currentState))
+    const node = createNode({
+      next: [mapped.graphite],
+      seq: [compute(fn)],
+    })
+    store.graphite.next.push(node)
+    return mapped
+  }
 
   return store
 }

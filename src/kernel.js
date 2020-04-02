@@ -1,9 +1,21 @@
 const queue = []
 
 const exec = () => {
-  while (queue.length) {
+  cycle: while (queue.length) {
     let { node, value } = queue.shift()
-    node.seq.forEach(step => (value = step(value)))
+
+    for (let i = 0; i < node.seq.length; i++) {
+      const step = node.seq[i]
+      switch (step.type) {
+        case 'compute':
+          value = step.fn(value)
+          break
+        case 'filter':
+          if (!step.fn(value)) continue cycle
+          break
+      }
+    }
+
     node.next.forEach(node => queue.push({ node, value }))
   }
 }
