@@ -16,11 +16,11 @@ export const createStore = defaultState => {
   }
 
   store.on = (event, fn) => {
-    const node = createNode({
-      next: [store.graphite],
+    createNode({
+      from: event,
       seq: [compute(value => fn(currentState, value))],
+      to: store,
     })
-    event.graphite.next.push(node)
     return store
   }
 
@@ -28,13 +28,14 @@ export const createStore = defaultState => {
 
   store.map = fn => {
     const mapped = createStore(fn(currentState))
-    const node = createNode({
-      next: [mapped.graphite],
+    createNode({
+      from: store,
       seq: [compute(fn)],
+      to: mapped,
     })
-    store.graphite.next.push(node)
     return mapped
   }
 
+  store.kind = 'store'
   return store
 }

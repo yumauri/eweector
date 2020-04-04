@@ -10,43 +10,44 @@ export const createEvent = () => {
 
   event.map = fn => {
     const mapped = createEvent()
-    const node = createNode({
-      next: [mapped.graphite],
+    createNode({
+      from: event,
       seq: [compute(fn)],
+      to: mapped,
     })
-    event.graphite.next.push(node)
     return mapped
   }
 
   event.prepend = fn => {
     const prepended = createEvent()
-    const node = createNode({
-      next: [event.graphite],
+    createNode({
+      from: prepended,
       seq: [compute(fn)],
+      to: event,
     })
-    prepended.graphite.next.push(node)
     return prepended
   }
 
   event.filter = fn => {
     const filtered = createEvent()
-    const node = createNode({
-      next: [filtered.graphite],
+    createNode({
+      from: event,
       seq: [filter(fn)],
+      to: filtered,
     })
-    event.graphite.next.push(node)
     return filtered
   }
 
   event.filterMap = fn => {
     const filtered = createEvent()
-    const node = createNode({
-      next: [filtered.graphite],
+    createNode({
+      from: event,
       seq: [compute(fn), filter(value => value !== undefined)],
+      to: filtered,
     })
-    event.graphite.next.push(node)
     return filtered
   }
 
+  event.kind = 'event'
   return event
 }

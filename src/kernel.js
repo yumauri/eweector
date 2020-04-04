@@ -1,3 +1,5 @@
+import { getGraph } from './getter.js'
+
 const queue = []
 
 const exec = () => {
@@ -21,6 +23,6 @@ const exec = () => {
 }
 
 export const launch = (unit, value) => {
-  queue.push({ node: unit.graphite, value })
+  queue.push({ node: getGraph(unit), value })
   exec()
 }
