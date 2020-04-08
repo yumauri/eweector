@@ -41,8 +41,8 @@
   "devDependencies": {
     "ava": "^3.6.0",
     "ninos": "^3.0.0",
-    "prettier": "^1.19.1",
-    "xo": "^0.28.3"
+    "prettier": "^2.0.4",
+    "xo": "^0.29.0"
   },
   "engines": {
     "node": ">=13"

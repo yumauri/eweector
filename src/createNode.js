@@ -1,7 +1,7 @@
 import { getGraph } from './getter.js'
 
 const arrify = units =>
-  [units]
+  [units] //
     .flat()
     .filter(Boolean)
     .map(getGraph)
