@@ -8,3 +8,4 @@ const is = type => any =>
 export const unit = is()
 export const event = is('event')
 export const store = is('store')
+export const effect = is('effect')

@@ -1,3 +1,4 @@
+export { createEffect } from './createEffect.js'
 export { createEvent } from './createEvent.js'
 export { createStore } from './createStore.js'
 export { createApi } from './createApi.js'

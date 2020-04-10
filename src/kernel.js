@@ -2,7 +2,11 @@ import { getGraph } from './getter.js'
 
 const queue = []
 
+let running = false
 const exec = () => {
+  if (running) return
+  running = true
+
   cycle: while (queue.length) {
     let { node, value } = queue.shift()
 
@@ -20,6 +24,8 @@ const exec = () => {
 
     node.next.forEach(node => queue.push({ node, value }))
   }
+
+  running = false
 }
 
 export const launch = (unit, value) => {

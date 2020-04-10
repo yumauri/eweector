@@ -30,12 +30,18 @@
       "import/no-useless-path-segments": "off",
       "unicorn/import-index": "off",
       "unicorn/filename-case": "off",
+      "unicorn/prevent-abbreviations": "off",
       "capitalized-comments": "off",
+      "prefer-destructuring": "off",
+      "no-multi-assign": "off",
+      "prefer-promise-reject-errors": "off",
+      "no-throw-literal": "off",
       "no-return-assign": "off",
       "default-case": "off",
       "no-labels": "off",
       "guard-for-in": "off",
-      "padding-line-between-statements": "off"
+      "padding-line-between-statements": "off",
+      "promise/prefer-await-to-then": "off"
     }
   },
   "devDependencies": {
