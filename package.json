@@ -1,6 +1,6 @@
 {
   "name": "eweector",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "e-wee-ctor is a educational purpose project to make a tiny Effector-like library",
   "author": "Victor Didenko <yumaa.verdin@gmail.com> (https://yumaa.name)",
   "type": "module",
@@ -8,7 +8,7 @@
   "scripts": {
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "xo",
-    "test": "ava --verbose"
+    "test": "ava --verbose --node-arguments=\"--experimental-modules\""
   },
   "prettier": {
     "printWidth": 80,
@@ -45,12 +45,12 @@
     }
   },
   "devDependencies": {
-    "ava": "^3.7.0",
+    "ava": "^3.7.1",
     "ninos": "^3.0.0",
-    "prettier": "^2.0.4",
+    "prettier": "^2.0.5",
     "xo": "^0.29.1"
   },
   "engines": {
-    "node": ">=13"
+    "node": ">=12"
   }
 }
