@@ -8,7 +8,7 @@
   "scripts": {
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "xo",
-    "test": "ava --verbose --node-arguments=\"--experimental-modules\""
+    "test": "ava --verbose"
   },
   "prettier": {
     "printWidth": 80,
@@ -51,6 +51,6 @@
     "xo": "^0.29.1"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   }
 }
