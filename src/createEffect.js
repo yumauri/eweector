@@ -6,8 +6,10 @@ import { launch } from './kernel.js'
 import { watch } from './watch.js'
 import { defer } from './defer.js'
 
-const status = name => ({ status, ...rest }) =>
-  status === name ? rest : undefined
+const status =
+  name =>
+  ({ status, ...rest }) =>
+    status === name ? rest : undefined
 
 const field = name => object => object[name]
 
